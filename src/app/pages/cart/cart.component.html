@@ -1,0 +1,35 @@
+<div class="cart">
+   <div class="container">
+    <h1>Cart</h1>
+    <div *ngIf="cartItems.length === 0">
+      <p>Your cart is empty.</p>
+    </div>
+    <div class="card" *ngFor="let item of cartItems; let i = index">
+      <div class="card-body">
+        <div class="item-info">
+          <img [src]="item.foodImg" alt="Food Image" />
+          <div class="item-details">
+            <h3>{{ item.foodName }}</h3>
+            <p>{{ item.foodPrice | currency: 'INR' }}</p>
+          </div>
+          <div class="quantity">
+            <button (click)="decrementQuantity(item)">-</button>
+            <span>{{ item.quantity }}</span>
+            <button (click)="incrementQuantity(item)">+</button>
+          </div>
+          <button class="btn btn-danger" (click)="removeFromCart(i)">Remove</button>
+        </div>
+      </div>
+    </div>
+  
+    <div class="total-amount">
+      <h3>Total Amount: {{ calculateTotalAmount() | currency: 'INR' }}</h3>
+    </div>
+    <button class="pay" (click)="pay()" [ngClass]="{'disabled': cartItems.length === 0}">Pay Now</button>
+  </div>
+  
+  <br>
+  
+  <hr>
+  <button class="pay" (click)="goBack()">Back</button>
+</div>

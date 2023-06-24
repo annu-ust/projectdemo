@@ -1,0 +1,76 @@
+.contact-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  /* background-color: rgb(172, 159, 147); */
+  background-image: url("../../../assets/img/chicken.jpg");
+  background-repeat: no-repeat;
+  background-size: 1200px 500px;
+  /* opacity: 0.7; */
+}
+
+.contact-details,
+.message-section {
+  flex: 1;
+  padding: 20px;
+  background-color: transparent;
+  border-radius: 10px;
+}
+.contact-details,
+.message-section {
+  opacity: 0.9;
+}
+.contact-details h2,
+.message-section h2 {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.contact-details p,
+.message-section p{
+  color: white;
+}
+.contact-details {
+  margin-right: 10px;
+}
+
+.message-section {
+  margin-left: 10px;
+}
+.form-group {
+  margin-bottom: 20px;
+  color: white;
+  /* background-color: #814646; */
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  color: #c70c0c;
+  background-color: #686464;
+  opacity: 0.4;
+}
+
+button[type="submit"] {
+  background-color: gray;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #e64400;
+}

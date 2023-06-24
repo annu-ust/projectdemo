@@ -1,0 +1,13 @@
+<h5 class="text-center">Sign in to Your Account</h5>
+  
+          <div class="form-group">
+            <label for="email">Email id:</label>
+            <input type="text" id="email" [(ngModel)]="user.email" class="form-control" placeholder="Enter your email id" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" [(ngModel)]="user.password" class="form-control" placeholder="Enter your password" required>
+          </div>
+          
+          <!-- <button class="btn btn-primary" (click)="login(user.email,user.password)">Login</button> -->
+          <button class="btn btn-primary" (click)="login()">Login</button>

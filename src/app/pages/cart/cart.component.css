@@ -1,0 +1,114 @@
+
+   .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px inset #000;
+    border-radius: 10px;
+    background: #e7e7e6;
+    opacity: 0.8;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .card {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .card-body {
+    padding: 10px;
+  }
+  
+  .item-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .item-info img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .item-details {
+    flex-grow: 1;
+  }
+  
+  .item-details h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .item-details p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .quantity {
+    display: flex;
+    align-items: center;
+  }
+  
+  .quantity button {
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background-color: #ccc;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .quantity span {
+    margin: 0 10px;
+    font-size: 16px;
+  }
+  
+  .quantity button:hover {
+    background-color: #999;
+  }
+  
+  .btn-danger {
+    margin-left: auto;
+  }
+  
+  .total-amount {
+    text-align: right;
+    margin-top: 20px;
+  }
+  
+  .total-amount h3 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .pay {
+    font-size: 16px;
+    padding: 8px 16px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+ .pay:hover {
+    background-color: #2980b9;
+  }
+  .cart-items div button {
+    margin-top: 10px;
+  }
+  .pay.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+  

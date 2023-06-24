@@ -1,0 +1,55 @@
+<!-- <div class="container mt-5 mb-5">
+
+    <div class="row">
+
+        <div class="col-lg-4" *ngFor="let fd of foodData">
+
+            <div class="foodbox mt-3 mb-3">
+                <img src="{{fd.foodImg}}">
+                <h1>{{fd.foodName}}</h1>
+                <p>{{fd.foodDetails}}</p>
+                <p>{{fd.foodPrice | currency:'INR'}}</p>
+                <br/>
+                
+                 <a [routerLink]="['/cart']">
+                    <button class="buybtn">
+                      Buy Now <i class="bi bi-bag"></i>
+                    </button>
+                  </a>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+</div> --> 
+<div class="search-container">
+    <input  type="text" placeholder="Search food" [(ngModel)]="searchQuery" (input)="search()" />
+    <button class="search-button" (click)="search()">Search</button>
+  </div>
+  
+  <div class="container mt-5 mb-5">
+    <div class="row">
+      <div class="col-lg-4" *ngFor="let fd of filteredFoodData">
+        <!-- Rest of the code for food items -->
+        <div class="foodbox mt-3 mb-3">
+            <img src="{{fd.foodImg}}">
+            <h1>{{fd.foodName}}</h1>
+            <p>{{fd.foodDetails}}</p>
+            <p>{{fd.foodPrice | currency:'INR'}}</p>
+            <br/>
+            
+           <!-- <a [routerLink]="['/cart']">  -->
+              <button class="buybtn" (click)="addToCart(fd)">Add to Cart<i class="bi bi-bag"></i></button> 
+                 <!-- <button class="buybtn">
+                  Buy Now <i class="bi bi-bag"></i>
+                </button> 
+               </a>  -->
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  

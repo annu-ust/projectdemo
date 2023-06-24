@@ -1,0 +1,45 @@
+
+   <div class="book-container">
+    <div class="book">
+      <div class="book-cover book-front">
+        <div class="login-content">
+          <div class="login-image">
+            <img src="\assets\img\plant.jpg" height="500" width="500">
+          </div>
+        </div>
+      </div>
+      <div class="book-cover book-back">
+        <div class="login-content">
+          <div class="login-heading">
+            <b>Hello!</b>
+          </div>
+          <h5 class="text-center">Sign in to Your Account</h5>
+  
+          <div class="form-group">
+            <label for="email">Email id:</label>
+            <input type="text" id="email" [(ngModel)]="user.email" class="form-control" placeholder="Enter your email id" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" [(ngModel)]="user.password" class="form-control" placeholder="Enter your password" required>
+          </div>
+          <div class="forgot-password-link">
+            <a (click)="navigateToReset()">Forgot Password?</a>
+          </div>
+          <!-- <button class="btn btn-primary" (click)="login(user.email,user.password)">Login</button> -->
+          <button class="btn btn-primary" (click)="login()">Login</button>
+          <!--alert message-->
+          
+          <div class="signup-link">
+            <a routerLink="/signup">Don't have an account? Sign up here</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  
+  
+  
+  
+  
