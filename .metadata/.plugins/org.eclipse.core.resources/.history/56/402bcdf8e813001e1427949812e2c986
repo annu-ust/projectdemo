@@ -1,0 +1,5 @@
+package ReservationTable.reservationtable.repository;
+
+public interface ReservationRepo {
+
+}

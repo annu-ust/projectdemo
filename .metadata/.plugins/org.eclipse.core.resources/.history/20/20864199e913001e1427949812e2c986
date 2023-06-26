@@ -1,0 +1,34 @@
+package ReservationTable.reservationtable.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import ReservationTable.reservationtable.model.Reservation;
+import ReservationTable.reservationtable.repository.ReservationRepo;
+
+public class ReservationController {
+
+    private final ReservationRepo reservationRepository;
+
+    @Autowired
+    public ReservationController(ReservationRepo reservationRepository) {
+        this.reservationRepository = reservationRepository;
+    }
+
+    @GetMapping("/form")
+    public String showReservationForm(Model model) {
+        model.addAttribute("reservation", new Reservation());
+        return "reservation-form";
+    }
+
+    @PostMapping("/submit")
+    public String submitReservationForm(Reservation reservation, RedirectAttributes redirectAttributes) {
+        reservationRepository.save(reservation);
+        redirectAttributes.addFlashAttribute("successMessage", "Reservation made successfully!");
+        return "redirect:/reservation/form";
+    }
+
+}

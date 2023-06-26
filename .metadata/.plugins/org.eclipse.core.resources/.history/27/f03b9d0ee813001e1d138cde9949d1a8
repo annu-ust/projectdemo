@@ -1,0 +1,5 @@
+package ReservationTable.reservationtable.model;
+
+public class Reservation {
+
+}
