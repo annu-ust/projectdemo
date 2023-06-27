@@ -24,7 +24,7 @@ import ReservationTable.reservationtable.repository.ReservationRepository;
 @RequestMapping("/reservation")
 public class ReservationController {
 	private final ReservationRepository reservationRepository;
-private final int totalSeats = 200; // Assuming a total of 20 seats in the restaurant
+private final int totalSeats = 200; // Assuming a total of 200 seats in the restaurant
 
 @Autowired
 public ReservationController(ReservationRepository reservationRepository) {
@@ -38,15 +38,16 @@ public ResponseEntity<List<Reservation>> getAllReservations() {
 }
 
 @PostMapping("/submit")
-public ResponseEntity<String> createReservation(@RequestBody Reservation reservation) {
+public ResponseEntity<?> createReservation(@RequestBody Reservation reservation) {
     if (isTableAvailable(reservation.getDateTime(), reservation.getNumberOfPeople())) {
         reservation.setConfirmed(true);
         reservationRepository.save(reservation);
-        return ResponseEntity.ok("Reservation created successfully!");
+        return ResponseEntity.ok("{\"message\": \"Reservation created successfully!\"}");
     } else {
-        return ResponseEntity.status(HttpStatus.SC_CONFLICT).body("Table is not available at the requested time.");
+        return ResponseEntity.status(HttpStatus.SC_CONFLICT).body("{\"error\": \"Table is not available at the requested time.\"}");
     }
 }
+
 
 private boolean isTableAvailable(LocalDateTime dateTime, int numberOfPeople) {
     long existingReservations = reservationRepository.countByDateTimeAndConfirmed(dateTime, true);
