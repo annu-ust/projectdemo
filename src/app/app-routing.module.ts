@@ -11,9 +11,11 @@ import { MenuComponent } from './pages/menu/menu.component';
 import { PaymentComponent } from './pages/payment/payment.component';
 import { ResetpasswordComponent } from './pages/resetpassword/resetpassword.component';
 import { SignupComponent } from './pages/signup/signup.component';
+import { TableComponent } from './pages/table/table.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
+  {path:'home',component:HomeComponent},
   {path:'menu',component:MenuComponent},
   {path:'menu/:id',component:MenuComponent},
   {path:'about',component:AboutComponent},
@@ -24,7 +26,8 @@ const routes: Routes = [
   {path:'reset-password',component:ResetpasswordComponent},
   {path:'payment',component:PaymentComponent},
   {path:'admin',component:AdminloginComponent},
-  {path:'create',component:CreateComponent}
+  {path:'create',component:CreateComponent},
+  {path:'table',component:TableComponent}
 
 
 ];

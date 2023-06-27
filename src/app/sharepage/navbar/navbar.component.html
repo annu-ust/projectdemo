@@ -25,6 +25,9 @@
           <li class="nav-item">
             <a class="nav-link" routerLink="admin" routerLinkActive="active-link">Admin</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="table" routerLinkActive="active-link">Table</a>
+          </li>
           <li class="item button">
             <button *ngIf="!isLoggedIn()" class="nav-link btn solid-button" (click)="toggleLogin()">Login</button>
             <button *ngIf="isLoggedIn()" class="nav-link btn solid-button" (click)="toggleLogin()">Logout</button>

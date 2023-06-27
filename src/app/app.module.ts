@@ -22,6 +22,7 @@ import { DeleteComponent } from './admin/delete/delete.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AdminloginComponent } from './admin/adminlogin/adminlogin.component';
+import { TableComponent } from './pages/table/table.component';
 
 
 @NgModule({
@@ -34,7 +35,7 @@ import { AdminloginComponent } from './admin/adminlogin/adminlogin.component';
     AboutComponent,
     ContactComponent,
     LoginComponent,
- 
+    TableComponent,
     SignupComponent,
     ResetpasswordComponent,
     PaymentComponent,
@@ -47,7 +48,7 @@ import { AdminloginComponent } from './admin/adminlogin/adminlogin.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,FormsModule,ReactiveFormsModule,HttpClientModule
+    AppRoutingModule,ReactiveFormsModule,HttpClientModule,FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

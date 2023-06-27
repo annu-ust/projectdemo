@@ -1,0 +1,111 @@
+
+.book-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color:transparent;
+    font-family: 'Dancing Script', cursive;
+     font-family: 'Playfair', serif;
+     background-image: url('https://images.pexels.com/photos/3763808/pexels-photo-3763808.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+     background-size: 1200px 600px;
+  }
+  
+  /* .book {
+    width: 900px;
+    height: 550px;
+    perspective: 1000px;
+  } */
+  .book {
+    width: 800px;
+    height: 550px;
+    perspective: 1000px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .day{
+    font-size: 24px;
+    color: #fff;
+  }
+  
+  .left-page,
+  .right-page {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    background-color:black;
+    opacity: 0.8;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+  }
+  
+  .right-page {
+    left: 50%;
+    transform: rotateY(0deg);
+  }
+  
+  .book-container:hover .left-page {
+    transform: rotateY(0deg);
+  }
+  
+  .book-container:hover .right-page {
+    transform: rotateY(0);
+  }
+  
+  .page-heading {
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: aliceblue;
+  }
+   p{
+    color: #fff;
+  }
+  .timings,
+  .day,
+  .contact-info {
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  
+  .form-field {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  label{
+    color: aliceblue;
+  }
+  hr{
+    color: #fff;
+  }
+  .btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background: var(--secondary-color);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background: var(--primary-color);
+  }
+  

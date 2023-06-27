@@ -1,0 +1,54 @@
+<div class="book-container">
+  <div class="book">
+    <div class="left-page">
+      <!-- Restaurant Timings -->
+      <h2 class="page-heading">Restaurant Timings</h2>
+      <div class="timings">
+        <div class="day">Monday-Friday</div>
+        <p>7am-11am (Breakfast)</p>
+        <p>11am-2pm (Lunch)</p>
+        <!-- <p>2pm-7pm (Snack Time)</p> -->
+        <p>7pm-11pm (Dinner)</p>
+      </div>
+      <hr>
+      <div class="day">Saturday and Sunday</div>
+      <p>9am-11am (Breakfast)</p>
+      <p>11am-2pm (Lunch)</p>
+      <!-- <p>2pm-7pm (Snack Time)</p> -->
+      <p>7pm-10pm (Dinner)</p>
+      <hr>
+      <div class="contact-info">Call Us: 123-456-7890</div>
+    </div>
+    <div class="right-page">
+      <!-- Reservation Form -->
+      <h2 class="page-heading">Book Your Table</h2>
+      <form class="reservation-form" [formGroup]="reservationForm" (ngSubmit)="onSubmit()">
+        <div class="form-field">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" placeholder="Your Name" required formControlName="name">
+        </div>
+        <div class="form-field">
+          <label for="email">Your Email</label>
+          <input type="email" id="email" placeholder="Your Email" required formControlName="email">
+        </div>
+        <div class="form-field">
+          <label for="special-requests">Phone Number</label>
+          <input type="number" id="phonenumber" required formControlName="phoneNumber" placeholder="your phonenumber">
+        </div>
+        <div class="form-field">
+          <label for="datetime">Date and Time</label>
+          <input type="datetime-local" id="datetime" required formControlName="dateTime">
+        </div>
+        <div class="form-field">
+          <label for="guests">Number of Guests</label>
+          <input type="number" id="guests" required formControlName="numberOfPeople">
+        </div>
+        <!-- <div class="form-field">
+          <label for="special-requests">Special Requests</label>
+          <textarea id="special-requests" rows="1" placeholder="Any special requests" formControlName="specialRequests"></textarea>
+        </div> -->
+        <button type="submit" class="btn">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
